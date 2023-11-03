@@ -6,6 +6,7 @@
 
 body{
     font-family: 'Montserrat', 'Arial', sans-serif;
+    overflow-x: hidden;
 }
 
 header{
@@ -61,6 +62,18 @@ header{
     border-bottom: 5px solid goldenrod;
 }
 
+.button{
+    margin-top: 30px;
+    display: inline-block;
+    background-color: goldenrod;
+    color: white;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 20px;
+}
 .banner{
     height: calc(100vh - 100px);
     width: 100%;
@@ -101,23 +114,113 @@ header{
     text-transform: uppercase;
     margin-top: 20px;
 }
-.banner a{
-    margin-top: 30px;
-    display: block;
-    background-color: goldenrod;
-    color: white;
-    font-size: 13px;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 30px;
-    border-radius: 20px;
-}
 .banner .slider_point{
-    background-color: red;
     height: 20px;
     width: 100%;
     position: absolute;
     margin-top: -50px;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner .pointer{
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    border: 2px solid goldenrod;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer; /*Quanto cursor está em cima, fica com estilo de clicavel*/
+}
+.banner .pointer.active{
+    background-color: goldenrod;
+}
+
+.default{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.default .section_title,
+.default .section_desc{
+    text-align: center;
+    text-transform: uppercase;  
+    font-weight: 600;
+}
+.default .section_title{
+    font-size: 30px;
+}
+.default .section_desc{
+    font-size: 12px;
+    color: gray;
+    margin-top: 10px;   
+    margin-bottom: 40px;   
+}
+.default .section_body{
+    margin: auto;
+    max-width: 1140px;
+}
+
+.default.light{
+    background-color: #f7f7f7;
+}
+.default.light .section_title,
+.default.light .section_body{
+    color: #000;
+}
+.default.dark{
+    background-color: #000;
+}
+.default.dark .section_title,
+.default.dark .section_body{
+    color: #fff;
+}
+
+
+
+/*
+CSS de Áreas Específicas
+*/
+
+.section_about-us{
+    display: flex;
+}
+.section_about-us--left{
+    flex: 1;
+    margin-right: 10px;
+}
+.section_about-us--left p{
+    line-height: 25px;
+}
+.section_about-us--right{
+    width: 500px;
+    text-align: center;
+}
+.section_about-us--right img{
+    width: 480px;
+    box-shadow: 2px 2px 10px #333;
+}
+
+
+.section_services{
+    display: flex;
+}
+.section_service{
+    flex:1;
+    text-align: center;
+    border-right: 2px solid #333;
+    padding: 15px;
+}
+.section_service:first-child{
+    border-left: 2px solid #333;
+}
+.section_service h4{
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.section_service p{
+    margin-top: 10px;
+    font-size: 13px;
+    color: #999;
 }
