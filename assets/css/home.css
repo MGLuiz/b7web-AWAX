@@ -74,6 +74,7 @@ header{
     padding: 10px 30px;
     border-radius: 20px;
 }
+
 .banner{
     height: calc(100vh - 100px);
     width: 100%;
@@ -124,7 +125,7 @@ header{
     align-items: center;
     justify-content: center;
 }
-.banner .pointer{
+.pointer{
     width: 15px;
     height: 15px;
     border-radius: 15px;
@@ -133,7 +134,7 @@ header{
     margin-right: 5px;
     cursor: pointer; /*Quanto cursor está em cima, fica com estilo de clicavel*/
 }
-.banner .pointer.active{
+.pointer.active{
     background-color: goldenrod;
 }
 
@@ -163,6 +164,11 @@ header{
 
 .default.light{
     background-color: #f7f7f7;
+}
+.default.gray{
+    background-color: #ddd;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
 }
 .default.light .section_title,
 .default.light .section_body{
@@ -223,4 +229,325 @@ CSS de Áreas Específicas
     margin-top: 10px;
     font-size: 13px;
     color: #999;
+}
+
+
+.section_projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section_projects-filters{
+    border: 1px solid #ccc;
+    background-color: #eee;
+    border-radius: 30px;
+    padding: 0px 20px;
+    width: fit-content;
+}
+.section_projects-filters ul,
+.section_projects-filters li{
+    list-style: none;
+}
+.section_projects-filters li{
+    display: inline-block;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 13px;
+    border-left: 1px solid #ccc;
+}
+.section_projects-filters li:hover,
+.section_projects-filters li.active{
+    border-bottom: 2px solid goldenrod;
+    cursor: pointer;
+}
+.section_projects-filters li:first-child{
+    border-left: 0;
+}
+
+.section_projects-photos{
+    width: 100vw;
+    max-width: 1140px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.section_projects-photos .photo{
+    width: 280px;
+}
+.section_projects-photos .photo .photo_area{
+    margin: 10px;
+    width: 260px;
+    height: 160px;
+}
+.section_projects-photos .photo .photo_area img{
+    width: inherit;
+    height: inherit;
+}
+.section_projects-photos .photo .photo_area .photo-info{
+    position: absolute;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: inherit;
+    height: inherit;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 0px 5px;
+}
+.section_projects-photos .photo .photo_area .photo-info h5{
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.section_projects-photos .photo .photo_area:hover .photo-info{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+.bg_team{
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 0px;
+}
+.section_team-area{
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 50px 0px;
+}
+
+.section_team{
+    overflow: hidden;
+    max-width: 880px;
+    margin: auto;
+}
+.section_team .sliders{
+    height: 100%;
+    width: 1000vw;
+}
+.section_team .slide{
+    width: 280px;
+    height: 100%;
+    display: inline-block;
+    background-color: #fff;
+    margin-right: 20px;
+}
+.section_team .slide_area{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    text-align: center;
+    padding: 30px;
+}
+
+.section_team-area .slider_point{
+    height: 20px;
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section_team-area .pointer{
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    border: 2px solid goldenrod;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer; /*Quanto cursor está em cima, fica com estilo de clicavel*/
+}
+.section_team-area .pointer.active{
+    background-color: goldenrod;
+}
+
+.section_team .slide_area .avatar{
+    width: 150px;
+    height: auto;
+}
+.section_team .slide_area .name,
+.section_reviews .sliders .slide .name{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 17px;
+    margin-top: 30px;
+    
+}
+.section_team .slide_area .work-role,
+.section_reviews .sliders .slide .role{
+    color: #999;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.section_team .slide_area .social_network{
+    display: flex;
+    margin-top: 20px;
+}
+.section_team .slide_area .social_network a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+    width: 25px;
+    height: 25px;
+    border-radius: 13px;
+    margin-right: 10px;
+
+}
+.section_team .slide_area .social_network a:last-child{
+    margin-right: 0px;
+}
+.section_team .slide_area .social_network a:hover{
+    background-color: goldenrod;
+}
+
+
+
+
+.section_reviews{
+    max-width: 100%;
+    overflow: hidden;
+}
+.section_reviews .sliders{
+    height: 100%;
+    width: 1000vw;
+}
+.section_reviews .sliders .slide{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100vw;
+}
+.section_reviews .sliders .slide .slide_area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    max-width: 600px;
+}
+.section_reviews .sliders .slide .quote{
+    margin-top: 20px;
+}
+.section_reviews .sliders .slide blockquote{
+    font-size: 13px;
+    margin-top: 10px;
+    color: #888888;
+}
+
+.section_body .section_reviews.slider_point{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.suport-us{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.suport-us img{
+    margin: 0px auto;
+}
+
+
+
+
+
+
+.billing-offers{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.offer{
+    background-color: #fff;
+    padding: 20px 40px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.offer .name{
+    font-size: 13px;
+    color: #000;
+    font-weight: 600;
+}
+.offer .price{
+    font-size: 30px;
+    color: #000;
+    font-weight: 700;
+    margin-top: 10px;
+}
+.offer .frequency{
+    color: #999;
+    font-size: 10px;
+}
+.offer .infos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.offer .infos .mini-bar{
+    background-color: #888888;
+    width: 8px;
+    height: 2px;
+    margin: 6px 0px;
+}
+.offer .infos .info{
+    color: #333;
+    font-size: 12px;
+}
+
+.offer .choose-btn{
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    background-color: #161714;
+    font-weight: 600;
+    margin-top: 30px;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+.offer .choose-btn.premium-btn{
+    background-color: goldenrod;
+}
+
+
+.premium-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.premium-features .feature{
+    display: flex;
+    margin-left: 50px;
+}
+.premium-features .feature:not(:last-child){
+    margin-bottom: 20px;
+}
+.check_icon{
+    margin-right: 20px;
+}
+.premium-features .feature .feature-infos .name{
+    font-size: 20px;
+    color: #000;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.premium-features .feature .feature-infos .info{
+    font-size: 13px;
+    color: #888888;
 }
